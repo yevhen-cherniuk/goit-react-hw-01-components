@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Profile.module.css'
 
-const Profile = ({ data: { name, tag, location, avatar, stats:{folowers, likes, views} } }) => (
+const Profile = ({ data: { name, tag, location, avatar, stats:{followers, likes, views} } }) => (
     <div className={style.profile}>
         <div className={style.description}>
             <img
@@ -18,7 +18,7 @@ const Profile = ({ data: { name, tag, location, avatar, stats:{folowers, likes, 
         <ul className={style.stats}>
             <li>
                 <span className="label">Followers</span>
-                <span className="quantity">{folowers}</span>
+                <span className="quantity">{followers}</span>
             </li>
             <li>
                 <span className="label">Views</span>
