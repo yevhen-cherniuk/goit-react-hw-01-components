@@ -4,21 +4,24 @@ import React from 'react';
 import friends from './data/friends.json';
 import userData from './data/user.json';
 import stats from './data/stats.json';
+import transactions from './data/transactions.json';
 
 // COMPONENTS
 import FriendsList from './components/FriendList/FriendList';
 import Profile from './components/Profile/Profile';
 import Statistics from './components/Statistics/Statistics';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+import Container from './components/Container/Container';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>First React Homework</h1>
-      <FriendsList friends={friends} />
+const App = () => (
+  
+    <Container>
       <Profile data={userData} />
       <Statistics title="Upload stats" stats={stats} />
-    </div>
+      <FriendsList friends={friends} />
+      <TransactionHistory items={transactions} />
+    </Container>
   );
-}
+
 
 export default App;

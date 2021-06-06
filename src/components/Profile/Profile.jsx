@@ -1,19 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import style from './Profile.module.css'
 
 const Profile = ({ data: { name, tag, location, avatar, stats:{folowers, likes, views} } }) => (
-    <div className="profile">
-        <div className="description">
+    <div className={style.profile}>
+        <div className={style.description}>
             <img
-                src="https://www.flaticon.com/svg/static/icons/svg/3135/3135715.svg"
+                src={avatar}
                 alt="Аватар пользователя" width='100'
-                className="avatar"
+                className={style.avatar}
             />
-            <p className="name">{name}</p>
-            <p className="tag">@{tag}</p>
-            <p className="location">{location}</p>
+            <p className={style.name}>{name}</p>
+            <p className={style.tag}>@{tag}</p>
+            <p className={style.location}>{location}</p>
         </div>
 
-        <ul className="stats">
+        <ul className={style.stats}>
             <li>
                 <span className="label">Followers</span>
                 <span className="quantity">{folowers}</span>
@@ -30,4 +32,14 @@ const Profile = ({ data: { name, tag, location, avatar, stats:{folowers, likes, 
     </div>
 );
 
+Profile.propTypes = {
+    userData: PropTypes.shape({
+    avatar: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.objectOf(PropTypes.number),
+  })
+};
+    
 export default Profile;

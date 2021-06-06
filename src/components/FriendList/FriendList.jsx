@@ -1,12 +1,13 @@
 import React from 'react';
 import FriendsListItem from './FriendsListItem';
 import PropTypes from 'prop-types';
+import style from './FriendList.module.css'
 
 
 const FriendsList = ({ friends }) => {
     console.log(friends);
     return (
-        <ul>
+        <ul className={style.friendsList}>
             {friends.map(({ avatar, name, isOnline, id }) => {
                 return (
                     <FriendsListItem key={id} avatar={avatar} name={name} isOnline={isOnline} id={id}/>

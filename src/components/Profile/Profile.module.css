@@ -1,0 +1,51 @@
+:global(body) {
+  padding-top: 100px;
+  background-color: #cccccc;
+}
+
+.profile {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.description {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.name {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.tag {
+  margin-bottom: 0;
+}
+
+.location {
+  margin-bottom: 50px;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border: 1px solid black;
+}
+.stats li {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px black;
+  flex-basis: calc(100% / 3);
+}
